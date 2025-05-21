@@ -3,135 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Smart Pop-Up - Powered by AI</title>
+  <title>Smart Pop-Up - AI for Shopify</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      background-color: #111827;
-      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      background-color: #0d0d0d;
+      color: #e0ffe0;
+      line-height: 1.6;
     }
     header {
-      background-color: #1f2937;
-      padding: 20px;
       text-align: center;
+      padding: 30px 20px;
     }
     header img {
-      height: 80px;
+      width: 200px;
     }
-    .main {
+    header h1 {
+      font-size: 2.5em;
+      margin-top: 20px;
+      color: #00ff7f;
+    }
+    .section {
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
-    .highlight {
-      font-size: 28px;
-      font-weight: 800;
-      margin-bottom: 20px;
-      color: #22c55e;
+    .section h2 {
+      color: #00ff7f;
+      font-size: 2em;
     }
-    .description {
-      font-size: 18px;
-      margin-bottom: 40px;
+    .section p {
+      font-size: 1.1em;
+      color: #c0ffc0;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #00ff7f;
     }
     video {
+      display: block;
+      margin: 40px auto;
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 30px;
-    }
-    form {
-      background-color: #1e293b;
-      padding: 20px;
+      max-width: 720px;
+      border: 3px solid #00ff7f;
       border-radius: 10px;
     }
-    form input, form button {
-      width: 100%;
+    form {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    input, button {
       padding: 10px;
       margin-top: 10px;
+      width: 100%;
+      font-size: 1em;
       border: none;
       border-radius: 5px;
     }
-    form input {
-      background: #334155;
+    input {
+      background: #333;
       color: #fff;
     }
-    form button {
-      background-color: #22c55e;
-      color: white;
-      font-weight: 600;
+    button {
+      background: #00ff7f;
+      color: #000;
       cursor: pointer;
     }
-    .why-us {
-      background-color: #0f172a;
-      padding: 30px;
-      border-radius: 10px;
-      margin-top: 40px;
-    }
-    .why-us h2 {
-      color: #22c55e;
-      font-size: 24px;
-    }
-    .why-us ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
     footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #94a3b8;
+      background: #111;
+      padding: 40px 20px;
+      color: #999;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
+
 <header>
   <img src="logo.png" alt="Smart Pop-Up Logo">
+  <h1>Smart Pop-Up for Shopify</h1>
 </header>
 
-<div class="main">
-  <div class="highlight">The First AI-Powered Pop-Up for Shopify Stores</div>
-  <div class="description">
-    Smart Pop-Up helps you sell more by showing the right message to the right customer, at the right time – using powerful AI technology. Join our early beta program and enjoy 3 months of free access.
-  </div>
+<section class="section">
+  <h2>Boost Your Shopify Sales with AI</h2>
+  <p>
+    Smart Pop-Up is the first <span class="highlight">AI-powered plugin</span> designed for Shopify stores.
+    It learns your customers’ behavior in real-time and delivers the perfect message at the right moment.
+  </p>
+  <p>
+    Our system uses artificial intelligence to show the most relevant offers – increasing your conversions automatically.
+    No manual effort, no guesswork.
+  </p>
+  <p>
+    <span class="highlight">Sign up now</span> for our early access program and get <strong>3 months FREE</strong> during the beta phase.
+  </p>
+</section>
 
-  <video src="promo.mp4" autoplay muted loop playsinline></video>
+<video autoplay muted loop>
+  <source src="promo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
+<section class="section">
+  <h2>Get 3 Months Free – Join the Beta</h2>
   <form id="signup-form">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <button type="submit">Join the Free Beta</button>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <button type="submit">Join Now</button>
   </form>
+</section>
 
-  <div class="why-us">
-    <h2>Why Choose Smart Pop-Up?</h2>
-    <ul>
-      <li>Built for Shopify stores</li>
-      <li>AI-based behavior tracking</li>
-      <li>Increases conversions automatically</li>
-      <li>Easy setup and instant results</li>
-    </ul>
-  </div>
+<section class="section">
+  <h2>Why Smart Pop-Up?</h2>
+  <ul>
+    <li>Built for Shopify stores</li>
+    <li>Real-time AI behavior tracking</li>
+    <li>Boosts conversions automatically</li>
+    <li>Easy to install and start seeing results</li>
+  </ul>
 
-  <footer>
-    &copy; 2025 Smart Pop-Up. Powered by AI.
-  </footer>
-</div>
+  <h2>What users say:</h2>
+  <p>“Sales jumped by 27% in one week – it’s like magic.” – Liran S.</p>
+  <p>“Smart Pop-Up does what no other plugin could do.” – Maya K.</p>
+</section>
+
+<footer>
+  &copy; 2025 Smart Pop-Up. Powered by AI. Built for Shopify.
+</footer>
 
 <script>
-  document.getElementById("signup-form").addEventListener("submit", function (e) {
+  const form = document.getElementById('signup-form');
+  form.addEventListener('submit', e => {
     e.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-
+    const data = {
+      name: form.name.value,
+      email: form.email.value
+    };
     fetch("https://script.google.com/macros/s/AKfycbysx346Ri9q_uxJvg3c8H6PtbmMUqVQx1yqf-H-_lDWBCc2BED4zhW9Jg6lu5VasqKc/exec", {
       method: "POST",
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email })
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' }
     })
-    .then(response => alert("Thank you for joining!"))
-    .catch(error => alert("Something went wrong. Please try again later."));
+    .then(res => alert('Thanks for joining!'))
+    .catch(err => alert('Something went wrong.'));
   });
 </script>
+
 </body>
 </html>
