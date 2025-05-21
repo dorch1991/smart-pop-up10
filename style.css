@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  max-width: 120px;
+  margin-bottom: 20px;
+}
+
+form input {
+  display: block;
+  width: 90%;
+  padding: 0.5rem;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  background: #008060;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #005d43;
+}
+
+.features, .testimonials {
+  text-align: left;
+  margin-top: 20px;
+}
+
+#countdown {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Pop-Up | Early Access</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0F172A;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background: #1E293B;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .logo {
+      width: 140px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      color: #10B981;
+      margin-bottom: 10px;
+    }
+    p.description {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #cbd5e1;
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      padding: 14px;
+      font-size: 18px;
+      background: #10B981;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #059669;
+    }
+    .why {
+      margin-top: 40px;
+      background: #0f172a;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+    }
+    .why h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .why ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .why li {
+      margin: 6px 0;
+      padding-left: 1em;
+      position: relative;
+    }
+    .why li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #10B981;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="Smart Pop-Up Logo" class="logo" />
+    <h1>Boost Your Shopify Store with Smart Pop-Up</h1>
+    <p class="description">
+      Introducing Smart Pop-Up – the AI-powered app for Shopify. It learns your customers’ behavior and shows them exactly what they need to see.  
+      Sign up now for the pre-sale and get <strong>3 months free</strong>!
+    </p>
+
+    <video autoplay muted loop>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <form id="signup-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <button type="submit">Join Now</button>
+    </form>
+
+    <div class="why">
+      <h2>Why use Smart Pop-Up?</h2>
+      <ul>
+        <li>Built for Shopify stores</li>
+        <li>AI-based behavior tracking</li>
+        <li>Increases conversions automatically</li>
+        <li>Easy setup and instant results</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbysx346Ri9q_uxJvg3c8H6PtbmMUqVQx1yqf-H-_lDWBCc2BED4zhW9Jg6lu5VasqKc/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(res => res.text())
+      .then(() => {
+        alert("Thanks for signing up!");
+        form.reset();
+      })
+      .catch(() => {
+        alert("There was a problem. Please try again later.");
+      });
+    });
+  </script>
+
+</body>
+</html>
