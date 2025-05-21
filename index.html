@@ -3,161 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Smart Pop-Up | Early Access</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <title>Smart Pop-Up - Powered by AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #0F172A;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin: 0;
+      background-color: #111827;
+      color: #ffffff;
+    }
+    header {
+      background-color: #1f2937;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 80px;
+    }
+    .main {
       padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
     }
-    .container {
-      max-width: 700px;
-      width: 100%;
-      background: #1E293B;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    }
-    .logo {
-      width: 140px;
-      margin: 0 auto 20px;
-      display: block;
-    }
-    h1 {
+    .highlight {
       font-size: 28px;
-      text-align: center;
-      color: #10B981;
-      margin-bottom: 10px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #22c55e;
     }
-    p.description {
-      text-align: center;
-      font-size: 16px;
-      margin-bottom: 30px;
-      color: #cbd5e1;
+    .description {
+      font-size: 18px;
+      margin-bottom: 40px;
     }
     video {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 8px;
       margin-bottom: 30px;
     }
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input {
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: none;
-    }
-    button {
-      padding: 14px;
-      font-size: 18px;
-      background: #10B981;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #059669;
-    }
-    .why {
-      margin-top: 40px;
-      background: #0f172a;
+      background-color: #1e293b;
       padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #334155;
+      border-radius: 10px;
     }
-    .why h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
+    form input, form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
     }
-    .why ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    form input {
+      background: #334155;
+      color: #fff;
     }
-    .why li {
-      margin: 6px 0;
-      padding-left: 1em;
-      position: relative;
+    form button {
+      background-color: #22c55e;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
     }
-    .why li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: #10B981;
+    .why-us {
+      background-color: #0f172a;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    .why-us h2 {
+      color: #22c55e;
+      font-size: 24px;
+    }
+    .why-us ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
+<header>
+  <img src="logo.png" alt="Smart Pop-Up Logo">
+</header>
 
-  <div class="container">
-    <img src="logo.png" alt="Smart Pop-Up Logo" class="logo" />
-    <h1>Boost Your Shopify Store with Smart Pop-Up</h1>
-    <p class="description">
-      Introducing Smart Pop-Up – the AI-powered app for Shopify. It learns your customers’ behavior and shows them exactly what they need to see.  
-      Sign up now for the pre-sale and get <strong>3 months free</strong>!
-    </p>
-
-    <video autoplay muted loop>
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <form id="signup-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <button type="submit">Join Now</button>
-    </form>
-
-    <div class="why">
-      <h2>Why use Smart Pop-Up?</h2>
-      <ul>
-        <li>Built for Shopify stores</li>
-        <li>AI-based behavior tracking</li>
-        <li>Increases conversions automatically</li>
-        <li>Easy setup and instant results</li>
-      </ul>
-    </div>
+<div class="main">
+  <div class="highlight">The First AI-Powered Pop-Up for Shopify Stores</div>
+  <div class="description">
+    Smart Pop-Up helps you sell more by showing the right message to the right customer, at the right time – using powerful AI technology. Join our early beta program and enjoy 3 months of free access.
   </div>
 
-  <script>
-    document.getElementById('signup-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const data = {
-        name: form.name.value,
-        email: form.email.value
-      };
+  <video src="promo.mp4" autoplay muted loop playsinline></video>
 
-      fetch("https://script.google.com/macros/s/AKfycbysx346Ri9q_uxJvg3c8H6PtbmMUqVQx1yqf-H-_lDWBCc2BED4zhW9Jg6lu5VasqKc/exec", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(res => res.text())
-      .then(() => {
-        alert("Thanks for signing up!");
-        form.reset();
-      })
-      .catch(() => {
-        alert("There was a problem. Please try again later.");
-      });
-    });
-  </script>
+  <form id="signup-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <button type="submit">Join the Free Beta</button>
+  </form>
 
+  <div class="why-us">
+    <h2>Why Choose Smart Pop-Up?</h2>
+    <ul>
+      <li>Built for Shopify stores</li>
+      <li>AI-based behavior tracking</li>
+      <li>Increases conversions automatically</li>
+      <li>Easy setup and instant results</li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Smart Pop-Up. Powered by AI.
+  </footer>
+</div>
+
+<script>
+  document.getElementById("signup-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    fetch("https://script.google.com/macros/s/AKfycbysx346Ri9q_uxJvg3c8H6PtbmMUqVQx1yqf-H-_lDWBCc2BED4zhW9Jg6lu5VasqKc/exec", {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email })
+    })
+    .then(response => alert("Thank you for joining!"))
+    .catch(error => alert("Something went wrong. Please try again later."));
+  });
+</script>
 </body>
 </html>
